@@ -46,13 +46,13 @@
 
 (setq-default cursor-type 'bar)
 
-(global-auto-revert-mode t)
+(global-auto-revert-mode 1)
 
 (setq initial-frame-alist (quote ((fullscreen . maximized))))
 
 (setq make-backup-files nil)
 
-(delete-selection-mode t)
+(delete-selection-mode 1)
 
 (when (file-exists-p custom-file)
   (load custom-file))
