@@ -17,7 +17,7 @@
 (defconst *is-a-mac* (eq system-type 'darwin))
 
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
-(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+(setq custom-file (expand-file-name "lisp/custom.el" user-emacs-directory))
 
 (require 'init-elpa)
 (require 'init-company)
