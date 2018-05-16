@@ -1,4 +1,4 @@
-;;; Init.el
+;;; init.el
 
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
@@ -14,17 +14,22 @@
 (add-hook 'after-init-hook
 	  (lambda () (setq gc-cons-threshold (* 20 1024 1024))))
 
+(setq default-directory "~/")
+
 (defconst *is-a-mac* (eq system-type 'darwin))
 
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 (setq custom-file (expand-file-name "lisp/custom.el" user-emacs-directory))
 
+(require 'cl-lib)
 (require 'init-elpa)
 (require 'init-company)
 (require 'init-theme)
 (require 'init-ivy)
 (require 'init-org)
 (require 'init-git)
+
+(my/package-install-p 'js2-mode)
 
 (my/package-install-p 'highlight-parentheses)
 (require 'highlight-parentheses)
