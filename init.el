@@ -24,6 +24,8 @@
 (require 'init-theme)
 (require 'init-ivy)
 (require 'init-org)
+(require 'init-git)
+
 
 (my/package-install-p 'highlight-parentheses)
 (require 'highlight-parentheses)
@@ -45,7 +47,7 @@
 
 (setq-default cursor-type 'bar)
 
-;;(global-hl-line-mode t)
+(global-auto-revert-mode t)
 
 (setq initial-frame-alist (quote ((fullscreen . maximized))))
 

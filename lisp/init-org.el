@@ -1,9 +1,10 @@
 ;;; init-org.el
 
 (require 'org)
+
+(setq org-src-fontify-natively t)
+
 (global-set-key (kbd "C-c c") 'org-capture)
-
-
 
 (setq org-capture-templates
       `(("t" "todo" entry (file "")  ; "" => `org-default-notes-file'
