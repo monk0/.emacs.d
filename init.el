@@ -26,7 +26,6 @@
 (require 'init-org)
 (require 'init-git)
 
-
 (my/package-install-p 'highlight-parentheses)
 (require 'highlight-parentheses)
 (global-highlight-parentheses-mode t)
