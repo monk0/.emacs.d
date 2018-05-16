@@ -29,7 +29,7 @@
 (require 'init-org)
 (require 'init-git)
 
-(my/package-install-p 'js2-mode)
+;;(my/package-install-p 'js2-mode)
 
 (my/package-install-p 'highlight-parentheses)
 (require 'highlight-parentheses)
@@ -56,6 +56,7 @@
 (setq initial-frame-alist (quote ((fullscreen . maximized))))
 
 (setq make-backup-files nil)
+(setq auto-save-default nil)
 
 (delete-selection-mode 1)
 

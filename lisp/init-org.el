@@ -29,6 +29,4 @@
       org-export-kill-product-buffer-when-displayed t
       org-tags-column 80)
 
-
-
 (provide 'init-org)
