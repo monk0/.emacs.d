@@ -1,6 +1,9 @@
 ;;; init-elpa.el
 (require 'package)
 
+(setq package-enable-at-startup nil)
+(package-initialize)
+
 (add-to-list 'package-archives '("gnu" . "http://elpa.emacs-china.org/gnu/") t)
 (add-to-list 'package-archives '("melpa" . "http://elpa.emacs-china.org/melpa-stable/") t)
 
