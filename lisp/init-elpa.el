@@ -1,9 +1,6 @@
 ;;; init-elpa.el
 (require 'package)
 
-(setq package-enable-at-startup nil)
-(package-initialize)
-
 (add-to-list 'package-archives '("gnu" . "http://elpa.emacs-china.org/gnu/") t)
 (add-to-list 'package-archives '("melpa" . "http://elpa.emacs-china.org/melpa-stable/") t)
 
@@ -21,12 +18,5 @@ re-downloaded in order to locate PACKAGE."
       (progn
         (package-refresh-contents)
         (require-package package min-version t)))))
-
-
-(defun my/package-install-p(pkg)
-  (when (not (package-installed-p pkg))
-    (package-refresh-contents)
-    (package-install pkg))
-  )
 
 (provide 'init-elpa)
