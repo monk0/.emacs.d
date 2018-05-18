@@ -21,6 +21,7 @@
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 (setq custom-file (expand-file-name "lisp/custom.el" user-emacs-directory))
 
+(require 'init-ui)
 (require 'cl-lib)
 (require 'init-elpa)
 (require 'init-company)
@@ -39,22 +40,6 @@
 (electric-indent-mode t)
 (electric-pair-mode t)
 
-(tool-bar-mode -1)
-
-(scroll-bar-mode -1)
-
-(global-linum-mode 1)
-
-(setq inhibit-startup-screen -1)
-
-(set-face-attribute 'default nil :height 160)
-
-(setq-default cursor-type 'bar)
-
-(global-auto-revert-mode 1)
-
-(setq initial-frame-alist (quote ((fullscreen . maximized))))
-
 (setq make-backup-files nil)
 (setq auto-save-default nil)
 
@@ -65,3 +50,5 @@
 
 (require 'server)
 (unless (server-running-p) (server-start))
+
+(global-set-key (kbd "C-x C-b") 'ibuffer)
