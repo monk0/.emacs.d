@@ -1,6 +1,6 @@
 ;;; init-git.el
 
-(my/package-install-p 'magit)
+(require-package 'magit)
 
 (require 'magit)
 

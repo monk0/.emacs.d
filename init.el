@@ -31,7 +31,7 @@
 
 ;;(my/package-install-p 'js2-mode)
 
-(my/package-install-p 'highlight-parentheses)
+(require-package 'highlight-parentheses)
 (require 'highlight-parentheses)
 (global-highlight-parentheses-mode t)
 

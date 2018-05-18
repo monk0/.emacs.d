@@ -1,6 +1,6 @@
 ;;; init-theme.el
 
-(my/package-install-p 'dracula-theme)
+(require-package 'dracula-theme)
 
 (load-theme 'dracula t)
 

@@ -1,6 +1,6 @@
 ;;; init-company.el
 
-(my/package-install-p 'company)
+(require-package 'company)
 
 (global-company-mode t)
 

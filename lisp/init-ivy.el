@@ -1,6 +1,6 @@
 ;;; init-ivy.el
 
-(my/package-install-p 'counsel)
+(require-package 'counsel)
 
 (ivy-mode t)
 
