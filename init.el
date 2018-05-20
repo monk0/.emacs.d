@@ -22,10 +22,13 @@
 (setq custom-file (expand-file-name "lisp/custom.el" user-emacs-directory))
 
 (require 'init-ui)
+ 
 (require 'cl-lib)
 (require 'init-elpa)
-(require 'init-company)
+
 (require 'init-theme)
+(require 'init-company)
+
 (require 'init-ivy)
 (require 'init-org)
 (require 'init-git)

@@ -8,10 +8,6 @@
 
 (setq org-src-fontify-natively t)
 
-(set-face-attribute 'org-level-1 nil :height 1.2 :bold t)
-(set-face-attribute 'org-level-2 nil :height 1.1 :bold t)
-(set-face-attribute 'org-level-3 nil :height 1.0 :bold t)
-
 (add-hook 'org-mode-hook (lambda () (setq truncate-lines nil)))
 
 (global-set-key (kbd "C-c c") 'org-capture)
