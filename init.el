@@ -53,5 +53,3 @@
 
 (require 'server)
 (unless (server-running-p) (server-start))
-
-(global-set-key (kbd "C-x C-b") 'ibuffer)
