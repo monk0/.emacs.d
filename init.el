@@ -22,7 +22,8 @@
 (setq custom-file (expand-file-name "lisp/custom.el" user-emacs-directory))
 
 (require 'init-ui)
- 
+(require 'init-keymap)
+
 (require 'cl-lib)
 (require 'init-elpa)
 

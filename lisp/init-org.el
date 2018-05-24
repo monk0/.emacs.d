@@ -34,4 +34,11 @@
       org-export-kill-product-buffer-when-displayed t
       org-tags-column 80)
 
+;; 
+(setq org-agenda-files (list "~/.org/inbox.org"
+			     "~/.org/project.org"
+			     "~/.org/archive.org"))
+
+(setq org-refile-targets (quote (("project.org":maxlevel . 1)("archive.org":maxlevel . 2))))
+
 (provide 'init-org)
