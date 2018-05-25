@@ -33,7 +33,7 @@
 (require 'init-ivy)
 (require 'init-org)
 (require 'init-git)
-
+(require 'init-yasnippet)
 ;;(my/package-install-p 'js2-mode)
 
 (require-package 'highlight-parentheses)

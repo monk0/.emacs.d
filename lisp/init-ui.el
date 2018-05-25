@@ -7,8 +7,6 @@
 (setq inhibit-startup-screen -1)
 (setq-default cursor-type 'bar)
 
-(global-auto-revert-mode 1)
-
 (set-face-attribute 'default nil :height 160)
 
 (setq initial-frame-alist (quote ((fullscreen . maximized))))
