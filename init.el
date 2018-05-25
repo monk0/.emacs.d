@@ -10,10 +10,6 @@
   (when (version< emacs-version minver)
     (error "This config requires v%s or higher" minver))) 
 
-(setq gc-cons-threshold (* 128 1024 1024))
-(add-hook 'after-init-hook
-	  (lambda () (setq gc-cons-threshold (* 20 1024 1024))))
-
 (setq default-directory "~/")
 
 (defconst *is-a-mac* (eq system-type 'darwin))
@@ -34,7 +30,7 @@
 (require 'init-org)
 (require 'init-git)
 (require 'init-yasnippet)
-;;(my/package-install-p 'js2-mode)
+(require 'init-vc)
 
 (require-package 'highlight-parentheses)
 (require 'highlight-parentheses)
