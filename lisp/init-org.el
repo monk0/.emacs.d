@@ -39,6 +39,6 @@
 			     "~/.org/project.org"
 			     "~/.org/archive.org"))
 
-(setq org-refile-targets (quote (("project.org":maxlevel . 1)("archive.org":maxlevel . 2))))
+(setq org-refile-targets (quote (("project.org":maxlevel . 1)("meeting.org":maxlevel . 1)("archive.org":maxlevel . 2))))
 
 (provide 'init-org)

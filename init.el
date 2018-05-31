@@ -32,9 +32,7 @@
 (require 'init-yasnippet)
 (require 'init-vc)
 
-(require-package 'highlight-parentheses)
-(require 'highlight-parentheses)
-(global-highlight-parentheses-mode t)
+(require 'init-highlight)
 
 (require 'electric)
 (electric-indent-mode t)

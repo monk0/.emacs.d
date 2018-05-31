@@ -6,7 +6,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (diff-hl yasnippet magit highlight-parentheses dracula-theme counsel company))))
+    (browse-at-remote yasnippet magit highlight-parentheses dracula-theme diff-hl counsel company))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
