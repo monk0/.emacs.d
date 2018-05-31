@@ -17,26 +17,36 @@
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 (setq custom-file (expand-file-name "lisp/custom.el" user-emacs-directory))
 
+;; UI 
 (require 'init-ui)
+;; global key map 
 (require 'init-keymap)
 
+;; support common lisp
 (require 'cl-lib)
+;; elpa repo
 (require 'init-elpa)
 
+;; dracula theme
 (require 'init-theme)
-(require 'init-company)
-
-(require 'init-ivy)
-(require 'init-org)
-(require 'init-git)
-(require 'init-yasnippet)
-(require 'init-vc)
-
+;; hightlight parentheses
 (require 'init-highlight)
 
-(require 'electric)
-(electric-indent-mode t)
-(electric-pair-mode t)
+;; auto complete any where
+(require 'init-company)
+
+;; ivy
+(require 'init-ivy)
+;; org
+(require 'init-org)
+(require 'init-git)
+;; yasnippet
+(require 'init-yasnippet)
+;; version control
+(require 'init-vc)
+
+;; auto electric
+(require 'init-electric)
 
 (setq make-backup-files nil)
 (setq auto-save-default nil)
@@ -48,3 +58,5 @@
 
 (require 'server)
 (unless (server-running-p) (server-start))
+
+(provide 'init)
