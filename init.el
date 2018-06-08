@@ -39,6 +39,7 @@
 (require 'init-ivy)
 ;; org
 (require 'init-org)
+;; git
 (require 'init-git)
 ;; yasnippet
 (require 'init-yasnippet)
@@ -48,6 +49,7 @@
 ;; auto electric
 (require 'init-electric)
 
+(require 'init-js)
 (setq make-backup-files nil)
 (setq auto-save-default nil)
 
