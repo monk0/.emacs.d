@@ -1,8 +1,7 @@
-;;; early-init.el -- 
-
+;;; early-init.el -- This file is loaded before the package system and GUI is initialized
 ;;; Commentary:
 
-;;; code:
+;;; Code:
 
 (setq package-enable-at-startup nil)
 

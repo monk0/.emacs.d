@@ -1,4 +1,7 @@
-;;; init-elpa.el
+;;; init --- elpa.el
+;;; Commentary:
+
+;; elpa settings
 
 ;;; Code:
 (require 'package)
@@ -11,7 +14,8 @@
 
 ;; install use-package from elpa
 (when (not (package-installed-p 'use-package))
-	(package-install 'use-package))
+  (package-refresh-contents)
+  (package-install 'use-package))
 
 (eval-when-compile
   (require 'use-package))

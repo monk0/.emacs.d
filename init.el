@@ -11,27 +11,33 @@
 	  custom-file (expand-file-name "lisp/custom.el" user-emacs-directory))
 
 (setq-default tab-width 4
-	      display-line-numbers 'relative)
+			  display-line-numbers 'relative)
 
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 
+
 (require 'init-elpa)
 
-(require 'init-ui)
-
-(require 'init-theme)
-
 (require 'init-evil)
-
 (require 'init-company)
+
+(require 'init-ui)
+(require 'init-theme)
 
 (require 'init-flycheck)
 
-;;(require 'init-ivy)
 (require 'init-vertico)
 (require 'init-orderless)
 (require 'init-consult)
 
+;; magit
 (require 'init-git)
+
+;; lsp
+;;(require 'init-lsp)
+
+;;
+;;(require 'init-lsp-java)
+
 (provide 'init)
 ;;; init.el ends here
