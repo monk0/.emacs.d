@@ -6,13 +6,14 @@
 ;;; code:
 (setq auto-save-default nil
       make-backup-files nil
-      default-directory "~/")
+      display-line-numbers t
+      default-directory "~/"
+	  custom-file (expand-file-name "lisp/custom.el" user-emacs-directory))
+
+(setq-default tab-width 4
+	      display-line-numbers 'relative)
 
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
-(setq custom-file (expand-file-name "lisp/custom.el" user-emacs-directory))
-
-(global-hl-line-mode)
-(global-linum-mode)
 
 (require 'init-elpa)
 

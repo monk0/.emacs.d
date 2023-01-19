@@ -1,9 +1,9 @@
-;;; init-ui.el
+;;; init --- emacs user interface settings
 ;;; Commentary:
 
-;; emacs ui setting
+;; Emacs ui setting
 
-;;; code:
+;;; Code:
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
