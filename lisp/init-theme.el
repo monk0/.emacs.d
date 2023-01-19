@@ -1,6 +1,11 @@
-;;; init-theme.el
+;;; init --- doom theme
+;;; Commentary:
 
-(use-package all-the-icons)
+;;
+
+;;; Code:
+(use-package all-the-icons
+  :if (display-graphic-p))
 
 (use-package doom-themes
   :defer nil
@@ -19,3 +24,4 @@
   (doom-themes-org-config))
 
 (provide 'init-theme)
+;;; init-theme.el ends here

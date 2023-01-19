@@ -1,22 +1,16 @@
-;;; nit-lsp.el
+;;; Init --- Lsp ModE
 ;;; Commentary:
 
-;;
-
-;;; code:
-
 ;; lsp mode
-(use-package lsp-mode
-  :hook
-  ((lsp-mode . lsp-enable-which-key-integration))
-  :commands lsp)
+
+;;; Code:
+
+(use-package lsp-mode :hook ((lsp-mode . lsp-enable-which-key-integration)))
 
 (use-package lsp-ui
   :commands lsp-ui-mode)
 
-;; lsp ivy
-(use-package lsp-ivy
-  :commands lsp-ivy-workspace-symbol)
+(use-package which-key :config (which-key-mode))
 
 ;; lsp treemacs
 (use-package lsp-treemacs
@@ -27,3 +21,4 @@
   :config (dap-auto-configure-mode))
 
 (provide 'init-lsp)
+;;; init-lsp.el ends here

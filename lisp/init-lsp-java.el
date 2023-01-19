@@ -1,14 +1,22 @@
-;;; init-lsp-java.el
+;;; init --- lsp-java.el
 ;;; Commentary:
 
-
 ;; lsp java
-(use-package lsp-java)
-;;(use-package dap-java)
+;;; Code:
+(use-package projectile)
+(use-package yasnippet :config (yas-global-mode))
+(use-package hydra)
+(use-package lsp-java :config (add-hook 'java-mode-hook 'lsp))
+(use-package dap-java :ensure nil)
+;;(use-package helm-lsp)
+;;(use-package helm
+;;  :config (helm-mode))
 
-(setq lsp-java-java-path "E:/Program Files/Java/jdk-17/bin/java"
+
+(setq lsp-java-java-path "D:/Program Files/Jdk/jdk-17.0.4.1/bin/java"
 	  lsp-java-configuration-runtimes '[(:name "JavaSE-11"
-                        :path "E:/Program Files/Java/jdk-11"
+                        :path "D:/Program Files/Jdk/jdk-11.0.16.1/"
                         :default t)])
 
 (provide 'init-lsp-java)
+;;; init-lsp-java.el ends here
