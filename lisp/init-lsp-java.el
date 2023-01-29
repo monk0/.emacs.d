@@ -6,7 +6,7 @@
 (use-package projectile)
 (use-package yasnippet :config (yas-global-mode))
 (use-package hydra)
-(use-package lsp-java :config (add-hook 'java-mode-hook 'lsp))
+(use-package lsp-java :hook ('java-mode-hook 'lsp))
 (use-package dap-java :ensure nil)
 ;;(use-package helm-lsp)
 ;;(use-package helm

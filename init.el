@@ -39,11 +39,14 @@
 (require 'init-orderless)
 (require 'init-consult)
 
+(require 'init-which-key)
+
 ;; magit
 (require 'init-git)
 
 ;; lsp
-(require 'init-lsp)
+;;(require 'init-lsp)
+(require 'init-eglot)
 
 ;;
 (require 'init-lsp-java)

@@ -10,7 +10,7 @@
 	read-buffer-completion-ignore-case t
 	completion-ignore-case t)
   :hook
-  (after-init-hook vertico-mode))
+  ('after-init-hook 'vertico-mode))
 
 (use-package vertico-directory
   :after vertico
@@ -25,7 +25,7 @@
 
 (use-package marginalia
   :hook
-  (after-init-hook marginalia-mode))
+  ('after-init-hook 'marginalia-mode))
 
 (use-package embark
   :defer nil
@@ -51,7 +51,7 @@
 (use-package embark-consult
   :defer nil ; only need to install it, embark loads it after consult if found
   :hook
-  (embark-collect-mode . consult-preview-at-point-mode))
+  ('embark-collect-mode 'consult-preview-at-point-mode))
 
 (provide 'init-vertico)
 ;;; init-vertico.el ends here
