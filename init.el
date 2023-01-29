@@ -51,7 +51,7 @@
 (require 'init-git)
 
 ;; lsp
-;;(require 'init-lsp)
+(require 'init-lsp)
 ;;(require 'init-eglot)
 
 ;;
