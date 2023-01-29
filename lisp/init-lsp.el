@@ -5,7 +5,12 @@
 
 ;;; Code:
 
-(use-package lsp-mode :hook ((lsp-mode . lsp-enable-which-key-integration)))
+(use-package lsp-mode
+  :init
+  (setq lsp-keymap-prefix "C-c l")
+  :hook (
+		 (java-mode-hook . lsp-deferred)
+		 ('lsp-mode . 'lsp-enable-which-key-integration)))
 
 (use-package lsp-ui
   :commands lsp-ui-mode)

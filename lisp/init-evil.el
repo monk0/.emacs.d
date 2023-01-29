@@ -5,7 +5,7 @@
 
 ;;; Code:
 (use-package evil
-  :hook ('after-init-hook 'evil-mode))
+  :hook ('after-init-hook . evil-mode))
 
 (provide 'init-evil)
 ;;; init-evil.el ends here
