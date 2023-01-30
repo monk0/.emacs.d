@@ -7,7 +7,7 @@
 (require 'package)
 
 (setq package-archives '(("gnu" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
-						  ("melpa" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/stable-melpa/")
+						  ("melpa-stable" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/stable-melpa/")
 						  ("org" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/org/")))
 
 (package-initialize)

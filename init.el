@@ -11,6 +11,8 @@
   (add-hook 'emacs-startup-hook
             (lambda () (setq gc-cons-threshold normal-gc-cons-threshold))))
 
+;;(setq debug-on-error t)
+
 (setq auto-save-default nil
       make-backup-files nil
 	  use-short-answers t
@@ -49,13 +51,14 @@
 ;;; dev tools
 ;; magit
 (require 'init-git)
+(require 'init-project)
 
 ;; lsp
 (require 'init-lsp)
-;;(require 'init-eglot)
+(require 'init-eglot)
 
 ;;
-;;(require 'init-lsp-java)
+(require 'init-lsp-java)
 
 (provide 'init)
 ;;; init.el ends here

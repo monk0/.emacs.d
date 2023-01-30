@@ -10,9 +10,8 @@
   (setq lsp-keymap-prefix "C-c l")
   :commands (lsp lsp-deferred)
   :hook (
-		 (java-mode-hook . lsp-deferred)
+		 ('java-mode-hook . #'lsp-deferred)
 		 ('lsp-mode . lsp-enable-which-key-integration)))
-
 
 (use-package dap-mode
   :after lsp-mode
