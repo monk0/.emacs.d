@@ -18,19 +18,19 @@
 	  use-short-answers t
       display-line-numbers t
       default-directory "~/"
-	  custom-file (expand-file-name "lisp/custom.el" user-emacs-directory))
+	  custom-file (expand-file-name "custom.el" user-emacs-directory))
 
 (setq-default tab-width 4
 			  display-line-numbers 'relative)
 
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 
-
 ;;; base config
 (require 'init-elpa)
 
 (require 'init-evil)
-(require 'init-company)
+;;(require 'init-company)
+(require 'init-corfu)
 
 (require 'init-ui)
 (require 'init-theme)

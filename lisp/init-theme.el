@@ -1,14 +1,15 @@
-;;; init --- doom theme
+;;; init --- theme settings
 ;;; Commentary:
 
-;;
+;; doom theme
 
 ;;; Code:
 (use-package all-the-icons
+  :demand t
   :if (display-graphic-p))
 
 (use-package doom-themes
-  :defer nil
+  :demand t
   :config
   ;;(load-theme 'doom-dracula t)
   ;; Enable flashing mode-line on errors
@@ -21,29 +22,24 @@
   (doom-themes-org-config))
 
 
+;; set default theme nil
+(setq current-theme nil)
 
 (defun huff/auto-change-theme ()
   "Automatic change themes"
-  (setq current-theme nil)
   (let* ((hour (nth 2 (decode-time (current-time))))
          (new-theme (cond ((< hour 8) 'doom-dracula)
 					  ((and (>= hour 8) (< hour 12)) 'doom-acario-light)
-					  ((and (>= hour 12) (< hour 17)) 'doom-acario-dark)
+					  ((and (>= hour 12) (< hour 17)) 'doom-gruvbox-light)
 					  ((>= hour 17) 'doom-dracula))))
-	
-	(if (equal current-theme new-theme)
-		(nil)
-	  (progn
-		(setq current-theme new-theme)
-		(load-theme current-theme t)))
+    
+	(when (not (equal current-theme new-theme))
+	  (setq current-theme new-theme)
+	  (load-theme current-theme t))
 
 	(run-at-time (format "%02d:%02d" (+ hour 1) 0) nil 'huff/auto-change-theme)))
 
 (huff/auto-change-theme)
-
-;;(message "%s" (cond ((< hour 8) 'adio)
-;;					((and (>= hour 8) (< hour 9)) 'yays)
-;;					((>= hour 10) 'adio)))
 
 (provide 'init-theme)
 ;;; init-theme.el ends here
