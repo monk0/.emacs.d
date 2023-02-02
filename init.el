@@ -47,7 +47,7 @@
 ;;; --------------------------------------------------------
 ;; General tools
 ;; vterm
-;;(require 'init-vterm)
+;;(require 'init-vterm) ;can't use on window system
 ;; magit
 (require 'init-git)
 
