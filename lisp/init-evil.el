@@ -1,11 +1,13 @@
-;;; init-evil.el --- emacs add vi
+;;; init-evil.el --- evil settings
 ;;; Commentary:
 
 ;; evil mode
 
 ;;; Code:
 (use-package evil
-  :hook ('after-init-hook . evil-mode))
+  :demand t
+  :config
+  (evil-mode t))
 
 (provide 'init-evil)
 ;;; init-evil.el ends here

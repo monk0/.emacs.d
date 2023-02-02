@@ -25,38 +25,44 @@
 
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 
-;;; base config
+(electric-pair-mode t)
+(column-number-mode t)
+(delete-selection-mode t)
+(add-hook 'prog-mode-hook #'hs-minor-mode)
+
+;;; -------------------------------------------------------
+;; Base config
 (require 'init-elpa)
 
 (require 'init-evil)
-;;(require 'init-company)
 (require 'init-corfu)
-
 (require 'init-ui)
-(require 'init-theme)
-
 (require 'init-flycheck)
 
 (require 'init-vertico)
 (require 'init-orderless)
 (require 'init-consult)
-
 (require 'init-which-key)
 
-
-;;;
-;; org mode
-
-
-;;; dev tools
+;;; --------------------------------------------------------
+;; General tools
+;; vterm
+;;(require 'init-vterm)
 ;; magit
 (require 'init-git)
+
+;; project
 (require 'init-project)
+
+;;; --------------------------------------------------------
+;; org mode
+
+;;; --------------------------------------------------------
+;; dev tools
 
 ;; lsp
 (require 'init-lsp)
 (require 'init-eglot)
-
 ;;
 (require 'init-lsp-java)
 

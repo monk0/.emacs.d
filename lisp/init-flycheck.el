@@ -5,10 +5,11 @@
 
 ;;; Code:
 (use-package flycheck
-  :defer nil
+  :demand t
   :init
   (setq flycheck-emacs-lisp-load-path 'inherit)
-  :hook ('after-init-hook . global-flycheck-mode))
+  :hook
+  (prog-mode . global-flycheck-mode))
 
 (provide 'init-flycheck)
 ;;; init-flycheck.el ends here
