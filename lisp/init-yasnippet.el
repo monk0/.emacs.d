@@ -6,8 +6,9 @@
 
 
 (use-package yasnippet
-  :hook
-  ('after-init-hook . yas-global-mode))
+  :demand t
+  :config
+  (yas-global-mode))
 
 (provide 'init-yasnippet)
 ;;; init-yasnippet.el ends here

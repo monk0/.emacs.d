@@ -28,22 +28,23 @@
 (electric-pair-mode t)
 (column-number-mode t)
 (delete-selection-mode t)
+(savehist-mode t)
 (add-hook 'prog-mode-hook #'hs-minor-mode)
 
 ;;; -------------------------------------------------------
 ;; Base config
+;; package 
 (require 'init-elpa)
 
 (require 'init-evil)
 (require 'init-corfu)
-(require 'init-ui)
 (require 'init-flycheck)
+(require 'init-ui)
 
 (require 'init-vertico)
 (require 'init-orderless)
 (require 'init-consult)
 (require 'init-which-key)
-
 ;;; --------------------------------------------------------
 ;; General tools
 ;; vterm
@@ -51,20 +52,24 @@
 ;; magit
 (require 'init-git)
 
+
+;; yasnippet
+(require 'init-yasnippet)
 ;; project
-(require 'init-project)
+;;(require 'init-project)
 
 ;;; --------------------------------------------------------
 ;; org mode
+
 
 ;;; --------------------------------------------------------
 ;; dev tools
 
 ;; lsp
-(require 'init-lsp)
-(require 'init-eglot)
+;;(require 'init-lsp)
+;;(require 'init-eglot)
 ;;
-(require 'init-lsp-java)
+;;(require 'init-lsp-java)
 
 (provide 'init)
 ;;; init.el ends here

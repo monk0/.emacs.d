@@ -5,7 +5,7 @@
 
 ;;; Code:
 (use-package orderless
-  :defer nil
+  :demand t
   :config
   (setq completion-styles '(orderless basic)
         completion-category-defaults nil

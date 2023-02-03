@@ -5,14 +5,16 @@
 
 ;;; Code:
 (use-package corfu
+  :pin gnu
   :config
   (setq corfu-auto t)
   (setq corfu-auto-delay 0)
-  (setq corfu-auto-prefix 3)
-
-  (setq corfu-separator ?\s)
-  (setq corfu-quit-no-match 'separator)
+  (setq corfu-auto-prefix 2)
+  (setq corfu-auto-delay 0.25)
   
+  (setq corfu-separator ?_)
+  (setq corfu-quit-no-match 'separator)
+
   :hook
   ('after-init-hook . global-corfu-mode))
 
@@ -25,6 +27,7 @@
 
 (use-package kind-icon
   :demand t
+  :pin gnu 
   :after corfu
   :custom
   (kind-icon-default-face 'corfu-default) ; to compute blended backgrounds correctly

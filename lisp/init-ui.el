@@ -11,12 +11,13 @@
 (setq inhibit-startup-screen t
 	  initial-frame-alist (quote ((fullscreen . maximized))))
 
-
 ;; doom-themes
 (use-package doom-themes
   :demand t
   :pin melpa-stable
   :config
+  (setq doom-themes-enable-bold t
+		doom-themes-enable-italic t)
   (doom-themes-visual-bell-config)
   (doom-themes-neotree-config)
   (doom-themes-org-config))
@@ -27,10 +28,11 @@
 (defun huff/auto-change-theme ()
   "Automatic change themes"
   (let* ((hour (nth 2 (decode-time (current-time))))
-         (new-theme (cond ((< hour 8) 'doom-dracula)
-					  ((and (>= hour 8) (< hour 12)) 'doom-acario-light)
-					  ((and (>= hour 12) (< hour 17)) 'doom-gruvbox-light)
-					  ((>= hour 17) 'doom-dracula))))
+         (new-theme (cond ((< hour 8) 'doom-outrun-electric)
+					  ((and (>= hour 8) (< hour 11)) 'doom-nord-light)
+					  ((and (>= hour 11) (< hour 13)) 'doom-acario-light)
+					  ((and (>= hour 13) (< hour 17)) 'doom-dracula)
+					  ((>= hour 17) 'doom-outrun-electric))))
     
 	(when (not (equal current-theme new-theme))
 	  (setq current-theme new-theme)

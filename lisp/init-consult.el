@@ -5,7 +5,7 @@
 
 ;;; Code:
 (use-package consult
-  :defer nil
+  :demand t
   :bind
   ("C-x b" . consult-buffer)
   ("C-x L" . consult-line))
