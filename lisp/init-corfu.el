@@ -14,11 +14,11 @@
   
   (setq corfu-separator ?_)
   (setq corfu-quit-no-match 'separator)
-
+  
   :hook
   ('after-init-hook . global-corfu-mode))
 
-;; Load corfu-popupinfo when load corfu
+;; Load corfu-popupinfo after load corfu
 (with-eval-after-load 'corfu
   (corfu-popupinfo-mode))
 

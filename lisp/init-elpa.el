@@ -6,16 +6,22 @@
 ;;; Code:
 (require 'package)
 
-(setq package-archives '(("gnu" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
-						 ("org" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
-						 ("melpa-stable" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/stable-melpa/")))
+(setq package-archives '(;("melpa-stable" . "https://stable.melpa.org/packages/")
+						 ("melpa-stable" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/stable-melpa/")
+						 ("gnu" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
+						 ("org" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/org/")))
 
+
+(package-archive-priority '(("mepla-stable" . 50)
+							("gnu" . 20)
+							("org" . 10)))
 (package-initialize)
 
 ;; install use-package from elpa
 (when (not (package-installed-p 'use-package))
   (package-refresh-contents)
-  (package-install 'use-package 'melpa-stable))
+  (setq package-pinned-packages '((use-package . "mepla-stable")))
+  (package-install 'use-package))
 
 (eval-when-compile
   (require 'use-package))

@@ -5,15 +5,15 @@
 
 ;;; Code:
 ;; Adjust garbage collection thresholds during startup, and thereafter
-(let ((normal-gc-cons-threshold (* 64 1024 1024))
-      (init-gc-cons-threshold (* 128 1024 1024)))
-  (setq gc-cons-threshold init-gc-cons-threshold)
+(let ((normal-gc-cons-threshold (* 16 1024 1024)))
+  (setq gc-cons-threshold most-positive-fixnum)
   (add-hook 'emacs-startup-hook
             (lambda () (setq gc-cons-threshold normal-gc-cons-threshold))))
 
 ;;(setq debug-on-error t)
 
-(setq auto-save-default nil
+(setq byte-compile-warnings nil
+	  auto-save-default nil
       make-backup-files nil
 	  use-short-answers t
       display-line-numbers t
@@ -25,10 +25,14 @@
 
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 
-(electric-pair-mode t)
-(column-number-mode t)
-(delete-selection-mode t)
-(savehist-mode t)
+(add-hook 'after-init-hook
+		  (lambda () (electric-pair-mode t)
+			(column-number-mode t)
+			(delete-selection-mode t)
+			(savehist-mode t)
+			(winner-mode t)
+			(recentf-mode)))
+
 (add-hook 'prog-mode-hook #'hs-minor-mode)
 
 ;;; -------------------------------------------------------
@@ -52,7 +56,6 @@
 ;; magit
 (require 'init-git)
 
-
 ;; yasnippet
 (require 'init-yasnippet)
 ;; project
@@ -60,7 +63,7 @@
 
 ;;; --------------------------------------------------------
 ;; org mode
-
+(require 'init-org)
 
 ;;; --------------------------------------------------------
 ;; dev tools
@@ -71,5 +74,10 @@
 ;;
 ;;(require 'init-lsp-java)
 
+;; Load custom file
+(when (file-exists-p custom-file)
+  (load custom-file))
+
+(insert "Emacs start " (emacs-init-time))
 (provide 'init)
 ;;; init.el ends here
