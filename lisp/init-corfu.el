@@ -5,8 +5,8 @@
 
 ;;; Code:
 (use-package corfu
-  :pin gnu
-  :config
+  :demand t
+  :init
   (setq corfu-auto t)
   (setq corfu-auto-delay 0)
   (setq corfu-auto-prefix 2)
@@ -15,8 +15,8 @@
   (setq corfu-separator ?_)
   (setq corfu-quit-no-match 'separator)
   
-  :hook
-  ('after-init-hook . global-corfu-mode))
+  :config
+  (global-corfu-mode))
 
 ;; Load corfu-popupinfo after load corfu
 (with-eval-after-load 'corfu
@@ -27,7 +27,6 @@
 
 (use-package kind-icon
   :demand t
-  :pin gnu 
   :after corfu
   :custom
   (kind-icon-default-face 'corfu-default) ; to compute blended backgrounds correctly

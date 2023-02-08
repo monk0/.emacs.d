@@ -10,7 +10,7 @@
   (add-hook 'emacs-startup-hook
             (lambda () (setq gc-cons-threshold normal-gc-cons-threshold))))
 
-;;(setq debug-on-error t)
+(setq debug-on-error t)
 
 (setq byte-compile-warnings nil
 	  auto-save-default nil
@@ -39,15 +39,16 @@
 ;; Base config
 ;; package 
 (require 'init-elpa)
+(require 'init-benchmark)
 
 (require 'init-evil)
 (require 'init-corfu)
-(require 'init-flycheck)
 (require 'init-ui)
 
 (require 'init-vertico)
 (require 'init-orderless)
 (require 'init-consult)
+(require 'init-flycheck)
 (require 'init-which-key)
 ;;; --------------------------------------------------------
 ;; General tools
@@ -74,10 +75,13 @@
 ;;
 ;;(require 'init-lsp-java)
 
+
+;; dash board
+(require 'init-dashboard)
+
 ;; Load custom file
 (when (file-exists-p custom-file)
   (load custom-file))
 
-(insert "Emacs start " (emacs-init-time))
 (provide 'init)
 ;;; init.el ends here

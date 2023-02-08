@@ -10,8 +10,8 @@
   (setq read-file-name-completion-ignore-case t
 		read-buffer-completion-ignore-case t
 		completion-ignore-case t)
-  :hook
-  ('after-init-hook . vertico-mode))
+  :config
+  (vertico-mode))
 
 (use-package vertico-directory
   :after vertico
@@ -25,14 +25,14 @@
   :hook (rfn-eshadow-update-overlay . vertico-directory-tidy))
 
 (use-package marginalia
-  :demand t
   :hook
   (after-init-hook . marginalia-mode))
 
 (use-package vertico-posframe
+  :demand t
   :after vertico
-  :hook
-  (vertico-mode-hook . vertico-posframe-mode))
+  :config
+  (vertico-posframe-mode))
 
 (provide 'init-vertico)
 ;;; init-vertico.el ends here

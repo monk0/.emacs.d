@@ -7,8 +7,8 @@
 (use-package evil
   :demand t
   :pin melpa-stable
-  :hook
-  ('after-init-hook . evil-mode))
+  :config
+  (evil-mode))
 
 (provide 'init-evil)
 ;;; init-evil.el ends here
