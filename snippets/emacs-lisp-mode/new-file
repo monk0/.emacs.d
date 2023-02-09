@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: new elisp file 
+# key: ;;;
+# --
+
+;;; init --- ${1:name} settings
+;;; Commentary:
+
+;;
+
+;;; Code:
+$0
+;;; init-${1:$(yas-substr yas-text "[^: ]*")}.el ends here

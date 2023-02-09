@@ -6,7 +6,6 @@
 ;;; Code:
 (use-package evil
   :demand t
-  :pin melpa-stable
   :config
   (evil-mode))
 

@@ -10,6 +10,9 @@
   (setq read-file-name-completion-ignore-case t
 		read-buffer-completion-ignore-case t
 		completion-ignore-case t)
+  :bind (:map vertico-map
+			  ("C-n" . vertico-next)
+			  ("C-p" . vertico-previous))
   :config
   (vertico-mode))
 

@@ -13,7 +13,6 @@
 
 ;; doom-themes
 (use-package doom-themes
-  :demand t
   :config
   (setq doom-themes-enable-bold t
 		doom-themes-enable-italic t)
@@ -40,15 +39,6 @@
 	(run-at-time (format "%02d:%02d" (+ hour 1) 0) nil 'huff/auto-change-theme)))
 
 (huff/auto-change-theme)
-
-(use-package dashboard
-  :demand t
-  :init
-  (setq dashboard-center-content t)
-  (setq dashboard-banner-logo-png 'logo.png)
-  (setq dashboard-banner-log-title "Welcome to Emacs!")
-  :config
-  (dashboard-setup-startup-hook))
 
 (provide 'init-ui)
 ;;; init-ui.el ends here
