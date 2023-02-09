@@ -10,7 +10,7 @@
   (add-hook 'emacs-startup-hook
             (lambda () (setq gc-cons-threshold normal-gc-cons-threshold))))
 
-(setq debug-on-error t)
+;;(setq debug-on-error t)
 
 (setq byte-compile-warnings nil
 	  auto-save-default nil
@@ -52,8 +52,6 @@
 (require 'init-which-key)
 ;;; --------------------------------------------------------
 ;; General tools
-;; vterm
-;;(require 'init-vterm) ;can't use on window system
 ;; magit
 (require 'init-git)
 
@@ -70,8 +68,8 @@
 ;; dev tools
 
 ;; lsp
-;;(require 'init-lsp)
-;;(require 'init-eglot)
+(require 'init-lsp)
+(require 'init-eglot)
 ;;
 ;;(require 'init-lsp-java)
 
