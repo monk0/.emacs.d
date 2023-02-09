@@ -10,4 +10,5 @@
 
 ;;; Code:
 $0
+(provide 'init-${1:$(yas-substr yas-text "[^:]*")})
 ;;; init-${1:$(yas-substr yas-text "[^: ]*")}.el ends here

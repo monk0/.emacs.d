@@ -60,7 +60,7 @@
 ;; yasnippet
 (require 'init-yasnippet)
 ;; project
-;;(require 'init-project)
+(require 'init-project)
 
 ;;; --------------------------------------------------------
 ;; org mode
