@@ -48,7 +48,7 @@
 (require 'init-vertico)
 (require 'init-orderless)
 (require 'init-consult)
-(require 'init-flycheck)
+;;(require 'init-flycheck)
 (require 'init-which-key)
 ;;; --------------------------------------------------------
 ;; General tools
@@ -68,7 +68,7 @@
 ;; dev tools
 
 ;; lsp
-(require 'init-lsp)
+;;(require 'init-lsp)
 (require 'init-eglot)
 ;;
 ;;(require 'init-lsp-java)
