@@ -4,10 +4,10 @@
 ;; 
 
 ;;; Code:
-(global-set-key "\C-c l" 'org-store-link)
-(global-set-key "\C-c a" 'org-agenda)
-(global-set-key "\C-c c" 'org-capture)
-(global-set-key "\C-c b" 'org-iswitchb)
+(global-set-key "\C-cl" 'org-store-link)
+(global-set-key "\C-ca" 'org-agenda)
+(global-set-key "\C-cc" 'org-capture)
+(global-set-key "\C-cb" 'org-iswitchb)
 
 (setq org-default-notes-file "~/.org/inbox.org"
 	  org-log-done 'time
