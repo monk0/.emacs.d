@@ -11,7 +11,6 @@
             (lambda () (setq gc-cons-threshold normal-gc-cons-threshold))))
 
 ;;(setq debug-on-error t)
-
 (setq byte-compile-warnings nil
 	  auto-save-default nil
       make-backup-files nil
@@ -39,7 +38,7 @@
 ;; Base config
 ;; package 
 (require 'init-elpa)
-(require 'init-benchmark)
+;;(require 'init-benchmark)
 
 (require 'init-evil)
 (require 'init-corfu)
@@ -69,7 +68,7 @@
 
 ;; lsp
 ;;(require 'init-lsp)
-(require 'init-eglot)
+;;(require 'init-eglot)
 ;;
 ;;(require 'init-lsp-java)
 
